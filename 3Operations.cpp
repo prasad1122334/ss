@@ -1,3 +1,5 @@
+%%writefile operation.cpp
+
 #include<iostream>
 #include<omp.h>
 #include<climits>
@@ -20,7 +22,7 @@ void min_reduction(int arr[],int n)
 void max_reduction(int arr[],int n)
 {
     int max_value=INT_MIN;
-    #pragma omp parallel for reduction(max=max_value)
+    #pragma omp parallel for reduction(max:max_value)
     for(int i=0;i<n;i++)
     {
         if(arr[i]>max_value)
