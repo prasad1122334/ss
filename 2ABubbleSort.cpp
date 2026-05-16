@@ -53,3 +53,8 @@ int main()
 
 }
 
+
+!g++ -fopenmp filename.cpp -o filename
+
+!./filename
+
